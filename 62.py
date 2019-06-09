@@ -29,4 +29,3 @@ class Solution(object):
                 else:
                     array[row][col] = array[row - 1][col] + array[row][col - 1]
         return array[n - 1][m - 1]
-

@@ -8,6 +8,8 @@ Return the minimum cost to fly every person to a city such that exactly N people
 
 '''
 import operator
+
+
 class Solution(object):
     def twoCitySchedCost(self, costs):
         """
@@ -15,10 +17,10 @@ class Solution(object):
         :rtype: int
         """
         person = zip(*costs)
-        diff = list(map(operator.sub,person[0],person[1]))
-        diff_ref = list(map(list,zip(diff, person[0],person[1])))
+        diff = list(map(operator.sub, person[0], person[1]))
+        diff_ref = list(map(list, zip(diff, person[0], person[1])))
         diff_ref.sort()
-        mid = len(diff_ref)//2
-        a = sum(list(map(list,zip(*diff_ref[:mid])))[1])
-        b = sum(list(map(list,zip(*diff_ref[mid:])))[2])
-        return(a+b)
+        mid = len(diff_ref) // 2
+        a = sum(list(map(list, zip(*diff_ref[:mid])))[1])
+        b = sum(list(map(list, zip(*diff_ref[mid:])))[2])
+        return (a + b)

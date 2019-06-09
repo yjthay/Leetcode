@@ -21,9 +21,9 @@ class Solution(object):
         :type p: str
         :rtype: bool
         """
-        p = "^"+p+"$"
+        p = "^" + p + "$"
         reg = re.compile(p)
-        if re.search(reg,s):
+        if re.search(reg, s):
             return True
         else:
             return False
